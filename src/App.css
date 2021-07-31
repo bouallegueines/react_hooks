@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    width: 300px;
+    margin: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+.cards-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .body{
+    background-image: url('https://captaindroid.com/wp-content/uploads/2019/02/530968-cool-theater-backgrounds-1920x1080-for-xiaomi.jpg');
   }
-}
+  .bar{
+    font-size: 160px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: wavy;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 5px blue;
+  }
+  .mr-auto  {
+    text-shadow: 2px 2px 5px blue;
+  }
+  .mb-3{
+   margin-left: auto;
+   margin-right: auto;
+  }
