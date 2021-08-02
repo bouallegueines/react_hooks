@@ -5,11 +5,12 @@ import MovieList from './components/MovieList';
 
 import { useState } from 'react';
 import FilterCard from './components/Filter';
+import AddMovie from './components/AddCard';
 
 function App() {
  const [film, setFilm] = useState([
   {
-    title: "Predistination",
+    title: "Predestination",
     src: "https://m.media-amazon.com/images/M/MV5BMTAzODc3NjU1NzNeQTJeQWpwZ15BbWU4MDk5NTQ4NTMx._V1_FMjpg_UX1000_.jpg",
     rating: "4" ,
     year:2014,
@@ -19,7 +20,7 @@ function App() {
   {
     title: " Me Before You",
     src: "https://fr.web.img6.acsta.net/pictures/16/05/02/17/27/063880.jpg",
-    rating: "3",
+    rating: "5",
     year: 2016,
     description:
       "A girl in a small town forms an unlikely bond with a recently-paralyzed man she's taking care of.",
@@ -54,7 +55,7 @@ function App() {
   {
     title: "The GodFather",
     src: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-    rating: "3" ,
+    rating: "5" ,
     year:1972,
     description:
       "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
@@ -81,6 +82,11 @@ function App() {
          
            const [textT, setTextT] = useState("");
            const [rateR, setRateR] = useState("");
+           const [movieListData, setMovieListData] = useState(film);
+           const getMoviesListData=(input)=>{
+             setMovieListData([...movieListData ,input]);
+  }
+      
      
 
   return (
@@ -92,6 +98,9 @@ function App() {
         setTextT={setTextT}
         setRateR={setRateR}
       ></FilterCard>
+      <div className="addMovie">
+     <AddMovie getMoviesListData={getMoviesListData}/>
+     </div>
     
      <MovieList
         film={film}
