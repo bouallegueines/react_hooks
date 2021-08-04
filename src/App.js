@@ -103,7 +103,7 @@ function App() {
      </div>
     
      <MovieList
-        film={film}
+        film={movieListData}
         textT={textT}
         rateR={rateR}
         setFilm={setFilm}

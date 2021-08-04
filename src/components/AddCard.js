@@ -19,8 +19,7 @@ function AddMovie({getMoviesListData}) {
   }
   const handleSubmit=()=>{
   getMoviesListData(film)
-
-    handleClose()
+     handleClose()
   }
   return (
     <>
@@ -54,7 +53,7 @@ function AddMovie({getMoviesListData}) {
       type="text"
       placeholder="Enter year..." 
       className="mr-sm-2 searchInput"
-      name="src"
+      name="year"
       onChange={handleChange}
 
        />
